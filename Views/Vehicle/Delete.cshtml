@@ -1,0 +1,59 @@
+﻿@model MvcCrud.Models.Vehicle
+
+@{
+    ViewBag.Title = "Delete";
+}
+<body>
+    <div class="jumbotron">
+
+        <h2>Delete</h2>
+
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <h4>Vehicle</h4>
+            <hr />
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.VehicleID)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.VehicleID)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.VehicleType)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.VehicleType)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Transmission)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Transmission)
+                </dd>
+
+
+
+
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    @Html.ActionLink("Back to List", "Index")
+                </div>
+            }
+        </div>
+
+    </div>
+</body>

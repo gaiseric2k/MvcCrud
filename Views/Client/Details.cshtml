@@ -1,0 +1,44 @@
+﻿@model MvcCrud.Models.Client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<div class="jumbotron">
+    <h2>Details</h2>
+
+    <div>
+        <h4>Client</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ClientName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClientName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ClientEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClientEmail)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ClientPhone)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ClientPhone)
+            </dd>
+
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ClientID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+   </div>
